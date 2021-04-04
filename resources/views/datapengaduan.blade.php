@@ -5,6 +5,11 @@
     <h1 class="text-center mt-4 text-white ">List Data Pengaduanku</h1>
     <div class="row mt-4">
         <div class="col-xl-12">
+            @if (session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
             <div class="alert alert-success alert-dismissible fade show">
                 @foreach ($queries as $qry)
                 <h4 class="alert-heading text-center">{{$qry}}</h4>
